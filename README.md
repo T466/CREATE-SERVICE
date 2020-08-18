@@ -1,5 +1,5 @@
 # CREATE-SERVICE
-Script - Criando Serviços de qualquer shell script
+Script - Criando Serviços de qualquer shell no Linux
 
 Descompacte o CREATE-SERVICE.tar.gz  em /opt   
 Execute:  /opt/CREATE-SERVICE/create-service.sh  e  siga as instruções do menu. 
