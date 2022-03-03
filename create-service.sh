@@ -73,4 +73,4 @@ echo; echo service $nomeservico status
 echo; sleep 10
 echo
 echo Enter para Sair
-read a; clear
+read a
