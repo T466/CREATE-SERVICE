@@ -1,0 +1,30 @@
+#!/bin/bash
+
+PROGRAMA="PPROGRAMA.SH"
+COMMAND="/usr/local/bin/$PROGRAMA"
+
+case "$1" in
+    start)
+        echo "PPrograma started"
+        "$COMMAND"
+        ;;
+    stop)
+        killall "$PROGRAMA"
+        echo "PPrograma stopped"
+        ;;
+    restart|force-reload)
+        echo "PPrograma restarted"
+        killall "$PROGRAMA"
+        "$COMMAND"
+        ;;
+    status)
+        if ps -C "$PROGRAMA" >/dev/null; then
+            echo "PPrograma is running"
+        else
+            echo "PPrograma is not running"
+        fi
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|force-reload|status}"
+        ;;
+esac
